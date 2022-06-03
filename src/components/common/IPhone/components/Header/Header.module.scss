@@ -1,0 +1,21 @@
+@use "styles" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 40px 0 30px 0;
+  border-bottom: 4px solid $primaryColor-4;
+
+  & > .name {
+    margin-left: 33px;
+  }
+
+  & > .cart {
+    margin-left: 192px;
+
+    & > button {
+      border: none;
+      background: none;
+    }
+  }
+}

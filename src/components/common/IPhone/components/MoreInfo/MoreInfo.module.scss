@@ -1,0 +1,36 @@
+@use "styles" as *;
+
+.moreInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 23.94px;
+  border-bottom: 4px solid $primaryColor-4;
+
+  & > .title {
+    padding: 32px 64.1px 30px 21.9px;
+  }
+
+  & > .images {
+    margin-left: 19px;
+
+    & > img {
+      margin-right: 25px;
+    }
+  }
+
+  & > .details {
+    padding :40.42px 0 49px 22px;
+
+    & > .detailsContent {
+      display: flex;
+      flex-direction: column;
+      margin-top: 23.15px ;
+      font-weight: 400;
+      font-size: 22px;
+      color: $primaryColor-3;
+      gap:14px;
+    }
+  }
+}

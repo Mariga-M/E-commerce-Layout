@@ -1,0 +1,31 @@
+@use "styles" as *;
+
+.feedWrapper {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 32px;
+
+  & > .upperFeed {
+    padding: 32px 68px 39px 18px;
+  }
+
+  & > .lowerFeed {
+    padding: 0 14px 0 18px;
+
+    & > .outer {
+      display: flex;
+      align-items: flex-end;
+
+      & > .label {
+        position: absolute;
+        width: 227px;
+        height: 56.54px;
+        font-weight:700;
+        font-size:15px;
+        background: $primaryColor-1;
+        border:none;
+      }
+    }
+  }
+}
