@@ -1,0 +1,19 @@
+@import "./colorVariables";
+@import "./index.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Archivo' ;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Archivo' ;
+}

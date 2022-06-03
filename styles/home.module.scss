@@ -1,0 +1,8 @@
+@import "./colorVariables";
+@import "./flex";
+@import "./globals";
+
+.container{
+  padding: 0 0 rem;
+  @include flex(column);
+}
