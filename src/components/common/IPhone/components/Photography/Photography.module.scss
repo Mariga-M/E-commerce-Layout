@@ -1,0 +1,53 @@
+@use "styles" as *;
+
+.photoFeed {
+  & > .header {
+    display: flex;
+    padding: 51px 30px 21px 30px;
+
+    & > .headerLeft {
+      & > .title {
+        margin-right: 3px;
+      }
+      & > img {
+        margin-right: 4px;
+      }
+      & > .premium {
+        color: $primaryColor-5;
+      }
+    }
+    & > .headerRight {
+      margin-left: auto;
+    }
+  }
+
+  & > .photo {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 0 22px;
+
+    & > .photoDetails {
+      display: flex;
+      flex-direction: column;
+
+      & > .category {
+        padding: 19.02px 0 17.08px 0;
+        color: $primaryColor-3;
+        font-weight: 700;
+        font-size: 22px;
+      }
+      & > .label {
+        font-weight: 700;
+        font-size: 34px;
+        margin-bottom:21.73px;
+    
+      }
+      & > .price {
+        color: $primaryColor-3;
+        font-weight: 400;
+        font-size: 29px;
+        margin-bottom:40.19px;
+      }
+    }
+  }
+}

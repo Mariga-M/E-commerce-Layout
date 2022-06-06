@@ -1,11 +1,14 @@
 import React from "react";
+import images from "../../helpers/image";
 import style from "./MoreInfo.module.scss";
+
+interface Image{
+    image:string,
+}
 
 interface MoreInfoProps{
     moreInfoTitle: string,
-    image1:string,
-    image2:string,
-    image3:string,
+    images:Image[];
     details:string,
     pixelSize: number,
     mbSize:number,
@@ -13,9 +16,7 @@ interface MoreInfoProps{
 
 const MoreInfo = ({
     moreInfoTitle,
-    image1,
-    image2,
-    image3,
+    images,
     details,
     pixelSize,
     mbSize
@@ -26,10 +27,19 @@ const MoreInfo = ({
             <div className={style.title}>
                 <span>{moreInfoTitle}</span>
             </div>
-            <div className={style.images}>
-                <img src={image1} alt="Image" />
-                <img src={image2} alt="Image" />
-                <img src={image3} alt="Image" />
+            <div className={style.image}>
+            {
+                images 
+                && images.length >=1
+                ?(
+                    images.map((image) => (
+                        <div key={image.image} className={style.img}>
+                            <img src={image.image} alt="Image" />
+                        </div>
+                    ))
+                )
+                :null
+            }
             </div>
             <div className={style.details}>
                 <span className={style.detailsTitle}>{details}</span>
@@ -44,9 +54,7 @@ const MoreInfo = ({
 
 MoreInfo.defaultProps ={
     moreInfoTitle:"People also buy",
-    image1:'',
-    image2:'',
-    image3:'',
+    image:'',    
     details:'Details',
     pixelSize: "Size: 1020 x 1020 pixel",
     mbSize: "Size: 15 mb",
