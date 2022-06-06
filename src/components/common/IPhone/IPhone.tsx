@@ -5,6 +5,9 @@ import Feed from "./components/Feed";
 import Add from "./components/Add";
 import Description from "./components/Description";
 import MoreInfo from "./components/MoreInfo";
+import Photography from "./components/Photography";
+import photos from './helpers/photo';
+import images from './helpers/image';
 
 const IPhone = () => {
   return (
@@ -14,10 +17,11 @@ const IPhone = () => {
       <Add />
       <Description />
       <MoreInfo
-        image1="/image1.svg"
-        image2="/image2.svg"
-        image3="/image3.svg"
+        images={images}
       />
+      <Photography
+      premium
+      photos={photos} />
     </article>
   );
 };
