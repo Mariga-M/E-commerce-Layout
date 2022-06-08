@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Feed.module.scss";
-import Image from "next/image";
+import Add from "../Add";
 
 interface FeedProps {
   feedTitle: string;
@@ -13,14 +13,16 @@ const Feed = ({ feedTitle,feedImage, label }: FeedProps) => {
     <main className={style.feedWrapper}>
       <section className={style.upperFeed}>
         <span className={style.feedTitle}>{feedTitle} </span>
+        <Add className={style.desktopAddToCart} />
       </section>
       <section className={style.lowerFeed}>
         <div className={style.outer}>
-          <Image src={feedImage} alt="Feed Image" width={382} height={239} />
+          <img src={feedImage} alt="Feed Image"  />
           <button className={style.label}>{label}</button>
         </div>
         
       </section>
+      <Add className={style.mobileAddToCart} />
     </main>
   );
 };
