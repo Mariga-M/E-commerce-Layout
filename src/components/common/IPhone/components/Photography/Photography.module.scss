@@ -3,7 +3,7 @@
 .photoFeed {
   & > .header {
     display: flex;
-    padding: 51px 30px 21px 30px;
+    padding: 51px 30px 21px ;
 
     & > .headerLeft {
       & > .title {
@@ -17,7 +17,7 @@
       }
     }
     & > .headerRight {
-      margin-left: auto;
+      margin-left: auto;      
     }
   }
 
@@ -30,6 +30,32 @@
       display: flex;
       flex-direction: column;
 
+      & > .add {  
+        position:relative;
+        
+        &> img{
+          width:100%; 
+        }
+            
+
+        & > .best {
+          display: flex;
+          font-size: 20px;
+          position: absolute;
+          background: $primaryColor-1;
+          padding: 8px 34.7px 10.49px 25px;
+        }
+
+        & > .addCart {
+          position:absolute;
+          bottom:0;
+          left:0;
+          width: 100%;
+          // padding: 13px 98px 10px 98px;
+          padding: 13px 98px 10px;
+        }
+      }
+
       & > .category {
         padding: 19.02px 0 17.08px 0;
         color: $primaryColor-3;
@@ -39,14 +65,13 @@
       & > .label {
         font-weight: 700;
         font-size: 34px;
-        margin-bottom:21.73px;
-    
+        margin-bottom: 21.73px;
       }
       & > .price {
         color: $primaryColor-3;
         font-weight: 400;
         font-size: 29px;
-        margin-bottom:40.19px;
+        margin-bottom: 40.19px;
       }
     }
   }

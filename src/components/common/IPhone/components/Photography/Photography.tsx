@@ -1,21 +1,28 @@
 import React from "react";
+import Add from "../Add/Add";
 import style from "./Photography.module.scss";
 
 interface Photo {
   image: string;
-  //   add: string;
   category: string;
   label: string;
   price: string;
+  bestSeller:boolean;
 }
 
 interface PhotographyProps {
   title: string;
   premium: boolean;
   photos: Photo[];
+  // button:string;
 }
 
-const Photography = ({ title, premium, photos }: PhotographyProps) => {
+const Photography = ({
+  title,
+  premium,
+  photos,
+}: // button
+PhotographyProps) => {
   return (
     <section className={style.photoFeed}>
       <header className={style.header}>
@@ -34,8 +41,15 @@ const Photography = ({ title, premium, photos }: PhotographyProps) => {
         {photos && photos.length >= 1
           ? photos.map((photo) => (
               <div key={photo.label} className={style.photoDetails}>
-                <img src={photo.image} alt="Photograph" />
-                {/* <span>{photo.add}</span> */}
+                <div className={style.add}>
+                  {photo.bestSeller ? (
+                    <span className={style.best}> Best Seller </span>
+                  ) : null}
+
+                  <img src={photo.image} alt="Photograph" />
+
+                  <Add className={style.addCart} />
+                </div>
                 <span className={style.category}>{photo.category}</span>
                 <span className={style.label}>{photo.label}</span>
                 <span className={style.price}>{photo.price}</span>

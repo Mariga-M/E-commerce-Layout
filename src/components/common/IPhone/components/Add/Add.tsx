@@ -1,12 +1,22 @@
 import React from "react";
-import style from "./Add.module.scss"
+import style from "./Add.module.scss";
 
-const Add =() => {
-    return (
-        <div className={style.add}>
-        <button> ADD TO CART </button>
-        </div>
-    )
+interface AddProps {
+  label?: string;
+  className?: string;
+}
+
+const Add = ({ label, className }: AddProps) => {
+  return (
+    <>
+      <button className={`${style.add} ${className}`}>{label}</button>
+    </>
+  );
+};
+
+Add.defaultProps = {
+  label: "ADD TO CART",
+  className: "",
 };
 
 export default Add;

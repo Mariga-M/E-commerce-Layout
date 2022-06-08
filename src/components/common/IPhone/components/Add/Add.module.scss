@@ -1,14 +1,7 @@
 @use "styles" as *;
 
 .add{
-    padding:30px 14px; 
-
-    &> button{
-    background: $primaryColor-2;
-    width: 386px;
-    height: 61px;
     color:$primaryColor-1;
+    background: $primaryColor-2;
     font-size: 23px;    
-    }
-
 }
