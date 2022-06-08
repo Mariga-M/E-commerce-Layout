@@ -1,0 +1,21 @@
+@use "styles" as *;
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  & > img {
+    margin-right: 15px;
+  }
+
+  & > span {
+    margin-right: 15px;
+    font-size: 29px;
+    color: $primaryColor-6;
+  }
+
+  & > .number {
+    color: $primaryColor-2;
+    font-weight: 600;
+  }
+}
