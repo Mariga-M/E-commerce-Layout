@@ -1,0 +1,52 @@
+@use "styles" as *;
+
+.filterBodyWrapper {
+  margin-bottom: 31px;
+  border-bottom: 4px solid $primaryColor-4;
+  padding:0 36px ;
+
+  & > .category {
+    border-bottom: 1px solid $primaryColor-7;
+
+    & > .categoryTitle {
+      font-size: 34px;
+      font-weight: 700;
+      padding: 31px 39px ;
+    }
+    & > .categoryBody {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+
+      & > img {
+        margin-right: 20px;
+      }
+
+      & > .categoryLabel {
+        font-size: 28px;
+        font-weight: 400px;
+      }
+    }
+  }
+  & > .priceRange {
+    & > .priceRangeTitle {
+      font-size: 34px;
+      font-weight: 700;
+      padding:31px 39px;
+    }
+    & > .priceRangeBody {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+
+      & > img {
+        margin-right: 20px;
+      }
+
+      & > .priceRangeLabel {
+        font-size: 28px;
+        font-weight: 400px;
+      }
+    }
+  }
+}

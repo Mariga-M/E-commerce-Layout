@@ -1,0 +1,21 @@
+@use 'styles' as *;
+
+.header{
+    display:flex;
+    padding: 19px 29px 39px 36px;
+    border-bottom: 1px solid $primaryColor-7;
+
+    &> .headerLeft{
+        font-weight:700;
+        font-size:34px;
+    }
+    &> .headerRight{
+        margin-left:auto;
+        
+        &> button{
+            background: none;
+            border:none;
+        }
+
+    }
+}

@@ -5,27 +5,61 @@
   flex-direction: column;
   font-weight: 700;
   font-size: 32px;
+  padding: 32px 18px 30px;
 
   & > .upperFeed {
-    padding: 32px 68px 39px 18px;
+    padding-bottom: 39px;
+    display:flex;
+
+    & > .desktopAddToCart {
+      padding: 13px 39px;
+      margin-left: auto;
+    }
   }
 
   & > .lowerFeed {
-    padding: 0 14px 0 18px;
+    padding-bottom: 30px;
 
     & > .outer {
-      display: flex;
-      align-items: flex-end;
+      position: relative;
+
+      & > img {
+        width: 100%;
+      }
 
       & > .label {
         position: absolute;
+        bottom: 0;
+        left: 0;
         width: 227px;
         height: 56.54px;
-        font-weight:700;
-        font-size:15px;
+        font-weight: 700;
+        font-size: 15px;
         background: $primaryColor-1;
-        border:none;
+        border: none;
       }
+    }
+  }
+
+  .mobileAddToCart {
+    padding: 18px 108px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .feedWrapper {
+    & > .upperFeed {
+      & > .desktopAddToCart {
+        display: none;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 999px) {
+  .feedWrapper {
+    & > .mobileAddToCart {
+      display: none;
     }
   }
 }

@@ -1,0 +1,24 @@
+@use "styles" as *;
+
+.footer {
+  display: flex;
+  padding: 31px 24px 25px 16px;
+
+  & > .clear {
+    width: 50%;
+    height: 48px;
+    border: 3px solid $primaryColor-2;
+    margin-right: 21px;
+    background: none;
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  & > .save {
+    width: 50%;
+    background: $primaryColor-2;
+    font-size: 23px;
+    font-weight: 500;
+    color: $primaryColor-1;
+  }
+}
