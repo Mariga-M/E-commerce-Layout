@@ -17,3 +17,10 @@ a {
   box-sizing: border-box;
   font-family: 'Archivo' ;
 }
+
+@media only screen and (max-width:414px) {
+  body{
+    background-color:$secondaryColor-1;
+  }
+  
+}

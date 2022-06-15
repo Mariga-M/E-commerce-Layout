@@ -10,19 +10,11 @@ const Header = ({ appName }: HeaderProps) => {
   return (
     <header className={style.header}>
       <section className={style.name}>
-        <Image src={appName} alt="App Name" width={124} height={19.67} />
-        {/* <img 
-            src={appName} 
-            className={appName}
-             /> */}
+        <img src={appName} alt="App Name"  />
       </section>
       <section className={style.cart}>
-        <button>
-          {/* <img 
-            src="/cart.svg"
-             alt="Cart" 
-             /> */}
-          <Image src="/cart.svg" alt="Cart" width={32} height={32} />
+        <button onClick={()=> alert('Cart')}>          
+          <img src="/cart.svg" alt="Cart"  />
         </button>
       </section>
     </header>

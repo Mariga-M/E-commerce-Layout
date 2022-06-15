@@ -1,8 +1,32 @@
-@use 'styles' as *;
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+@use "styles" as *;
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap");
 
-.wrapper{
+.wrapper {
   // width: 414px;
   // height: 4421px;
   background: $primaryColor-1;
+
+  button {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .desktopMoreDescription {
+    display: flex;
+    padding:0 15px ;
+    width: 100%;
+    border-bottom: 4px solid $primaryColor-4;
+
+    & > .desktopDescription {
+      width: 690px;
+      height: 299px;
+      
+    }
+    & > .desktopMore {      
+      margin-left: auto;
+      padding-left: 68px;
+      text-align: end;
+    }
+  }
 }

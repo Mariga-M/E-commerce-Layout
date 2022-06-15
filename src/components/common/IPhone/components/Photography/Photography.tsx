@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Add from "../Add/Add";
+import Filter from "../Filter";
+import FilterBody from "../Filter/FilterBody";
 import style from "./Photography.module.scss";
 
 interface Photo {
@@ -14,15 +16,22 @@ interface PhotographyProps {
   title: string;
   premium: boolean;
   photos: Photo[];
-  // button:string;
 }
+
 
 const Photography = ({
   title,
   premium,
   photos,
-}: // button
+}: 
 PhotographyProps) => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClick = () => {
+   setShow(current => !current)
+  }
+
   return (
     <section className={style.photoFeed}>
       <header className={style.header}>
@@ -34,10 +43,25 @@ PhotographyProps) => {
           ) : null}
         </section>
         <section className={style.headerRight}>
-          <img src="/filter.svg" alt="filter" />
+          <button onClick={handleClick}>
+            <img src="/filter.svg" alt="filter" />
+          </button>
+          {show &&
+            <Filter />
+          }
+          <section className={style.sortBy}>
+            <img src='/arrow.svg' alt="" />
+            <span> Sort By </span>
+            <span> Price </span>
+            <img src='/arrowup.svg' alt='' />
+          </section>
         </section>
       </header>
       <section className={style.photo}>
+        <div className={style.filterBody}>
+          <FilterBody categories={[]} priceRanges={[]} />
+        </div>
+        <div className={style.photoDetailsContainer}>
         {photos && photos.length >= 1
           ? photos.map((photo) => (
               <div key={photo.label} className={style.photoDetails}>
@@ -56,6 +80,7 @@ PhotographyProps) => {
               </div>
             ))
           : null}
+          </div>
       </section>
     </section>
   );
